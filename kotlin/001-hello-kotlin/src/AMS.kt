@@ -1,7 +1,10 @@
+package AMS
+
 import java.util.*
 
 fun main(args: Array<String>) {
     feedTheFish()
+
 }
 
 fun feedTheFish() {
@@ -20,12 +23,14 @@ fun swim(time: Int, speed: String = "fast") {
     println("swimming $speed in $time")
 }
 
+fun getDirtyFromSensor() = 20
+
 fun shouldChangeWater(
     day: String,
     temperature: Int = 22,
-    dirty: Int = 20
+    dirty: Int = getDirtyFromSensor()
 ) : Boolean {
-    
+
     val isTooHot = temperature > 30
     val isTooDirty = dirty > 30
     val isSunday = day == "Sunday"
