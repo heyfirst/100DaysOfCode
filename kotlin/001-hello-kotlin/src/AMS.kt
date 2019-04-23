@@ -17,7 +17,7 @@ fun feedTheFish() {
 }
 
 fun swim(time: Int, speed: String = "fast") {
-    println("swimming $speed")
+    println("swimming $speed in $time")
 }
 
 fun shouldChangeWater(
@@ -25,7 +25,17 @@ fun shouldChangeWater(
     temperature: Int = 22,
     dirty: Int = 20
 ) : Boolean {
-    return true
+    
+    val isTooHot = temperature > 30
+    val isTooDirty = dirty > 30
+    val isSunday = day == "Sunday"
+
+    return when {
+        isTooHot -> true
+        isTooDirty -> true
+        isSunday -> true
+        else -> false
+    }
 }
 
 fun fishFood(day : String) : String {
@@ -46,12 +56,3 @@ fun randomDay() : String {
     return weeks[Random().nextInt(7)]
 }
 
-
-fun canAddFish (
-    tankSize: Double,
-    currentFish: List<Int>,
-    fishSize: Int = 2,
-    hasDecorations: Boolean = true
-): Boolean {
-    return tankSize * if (hasDecorations) 0.8 else 1.0 >= (currentFish.sum() + fishSize)
-}
