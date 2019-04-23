@@ -12,19 +12,16 @@ fun feedTheFish() {
 }
 
 fun fishFood(day : String) : String {
-    var food = "fasting"
-
-    when(day) {
-        "Sunday" -> food = "flakes"
-        "Monday" -> food = "pellets"
-        "Tuesday" -> food = "redworms"
-        "Wednesday" -> food = "granules"
-        "Thursday" -> food = "mosquitoes"
-        "Friday" -> food = "lettuce"
-        "Saturday" -> food = "plankton"
+    return when (day) {
+        "Sunday" -> "flakes"
+        "Monday" -> "pellets"
+        "Tuesday" -> "redworms"
+        "Wednesday" -> "granules"
+        "Thursday" -> "mosquitoes"
+        "Friday" -> "lettuce"
+        "Saturday" -> "plankton"
+        else -> "fasting"
     }
-
-    return food
 }
 
 fun randomDay() : String {
