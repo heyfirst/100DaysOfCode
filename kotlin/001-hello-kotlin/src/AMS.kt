@@ -4,6 +4,43 @@ import java.util.*
 
 fun main(args: Array<String>) {
     feedTheFish()
+    eagerExample()
+}
+
+fun eagerExample() {
+    val decorators = listOf("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
+
+    println("----------------- Filter -------------------")
+    var eager = decorators.filter { it[0] == 'p'}
+    println(eager)
+
+    println("----------------- Lazy Filter -------------------")
+    val lazyEager = decorators.asSequence().filter { it[0] == 'p'}
+    println(lazyEager)
+    println(lazyEager.toList())
+
+    println("----------------- LazyMap -------------------")
+
+    val lazyMapEager = decorators.asSequence().map {
+        println("map: $it")
+        it
+    }
+    println(lazyMapEager.first())
+    println(lazyMapEager.toList())
+    println(lazyMapEager)
+
+    println("----------------- Apply -------------------")
+    val sortedEager = decorators
+        .filter { it.contains("o") }
+        .sortedBy { it.length }
+
+    println(sortedEager)
+
+    val sortedTakeEager = decorators.take(3)
+        .filter { it.contains("o") }
+        .sortedBy { it.length }
+
+    println(sortedTakeEager)
 
 }
 
@@ -13,7 +50,7 @@ fun feedTheFish() {
     println("Today is $day and the first eat $food.")
 
     if(shouldChangeWater(day)) {
-        println("Change the water today.")
+        println("Change  the water today.")
     }
 
     swim(50, speed="slow")
@@ -61,3 +98,17 @@ fun randomDay() : String {
     return weeks[Random().nextInt(7)]
 }
 
+var dirty = 20
+
+val waterFilter: (Int) -> Int = { dirty -> dirty / 2 }
+fun feedFish(dirty: Int) = dirty + 20
+
+fun updateDirty(dirty: Int, operation: (Int) -> Int): Int {
+    return operation(dirty)
+}
+
+fun dirtyProcessor() {
+    dirty = updateDirty(dirty, waterFilter)
+    dirty = updateDirty(dirty, ::feedFish)
+    dirty = updateDirty(dirty, { dirty -> dirty + 50 })
+}
