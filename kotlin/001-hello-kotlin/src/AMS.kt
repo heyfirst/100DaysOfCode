@@ -1,5 +1,3 @@
-package AMS
-
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -11,7 +9,7 @@ fun eagerExample() {
     val decorators = listOf("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
 
     println("----------------- Filter -------------------")
-    var eager = decorators.filter { it[0] == 'p'}
+    val eager = decorators.filter { it[0] == 'p'}
     println(eager)
 
     println("----------------- Lazy Filter -------------------")
