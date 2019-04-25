@@ -1,11 +1,28 @@
 package Aquarium
 
-class Aquarium {
-    var width: Int = 20
-    var height: Int = 40
-    var length: Int = 100
+import kotlin.math.PI
 
-    var volume:Int
+open class Aquarium (
+    var width: Int = 100,
+    var height: Int = 20,
+    var length: Int = 40
+) {
+    open var volume:Int
         get() = width * height * length / 1000
-        private set(value) { height = (value * 1000)/ (width * length) }
+        set(value) { height = (value * 1000)/ (width * length) }
+
+    open var water: Double = volume * 0.9
+
+    constructor(numberOfFish: Int) : this() {
+        val water = numberOfFish * 2000
+        val tank = water + water * 0.1
+        height = ( tank / (length * width)).toInt()
+    }
+}
+
+class TowerTank(): Aquarium() {
+    override var water = volume * 0.8
+    override var volume:Int
+        get() = (width * height * length / 1000 * PI).toInt()
+        set(value) { height = (value * 1000)/ (width * length) }
 }
