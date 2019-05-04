@@ -29,3 +29,24 @@ object Constants {
 fun printUrl(title: String) {
     println(Constants.BASE_URL + title + ".html")
 }
+
+
+fun String.hasSpace() : Boolean {
+    val found = this.find { it == ' ' }
+    return found != null
+}
+
+data class AquariumPlant(val color: String, private val size: Int)
+
+fun AquariumPlant.isRed () = color == "Red"
+val AquariumPlant.isGreen
+    get() = color == "Green"
+
+fun AquariumPlant?.pull() {
+    this?.apply {
+        println("hi")
+    }
+}
+
+//fun AquariumPlant.isOverSize () = size > 100
+
