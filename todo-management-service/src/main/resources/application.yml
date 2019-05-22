@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: todo-management-service
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/spring-todos?useUnicode=true&characterEncoding=utf8
+    username: postgres
+    password: postgresisthebest
+
+  jpa:
+    generate-ddl: true
+
+  profiles:
+    active: sandbox

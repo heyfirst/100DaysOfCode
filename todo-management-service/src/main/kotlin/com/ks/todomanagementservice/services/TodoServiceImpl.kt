@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service
 
 @Service
 class TodoServiceImpl(val todoRepo: TodoRepo) : TodoService {
+    init {
+        println("I'm TodoServiceImpl")
+    }
+
     override fun createTodo(todo: Todo): Todo {
         return todoRepo.saveAndFlush(todo)
     }
