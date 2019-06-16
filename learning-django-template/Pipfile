@@ -4,9 +4,12 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+flake8 = "*"
+yapf = "*"
 
 [packages]
 django = "*"
+django-debug-toolbar = "*"
 
 [requires]
 python_version = "3.7"
