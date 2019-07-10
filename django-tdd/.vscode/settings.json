@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/Users/kanisornsutham/.local/share/virtualenvs/django-tdd-LW02n1ZB/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "yapf"
+}

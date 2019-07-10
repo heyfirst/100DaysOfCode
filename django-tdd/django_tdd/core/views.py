@@ -1,3 +1,6 @@
-from django.shortcuts import render
+# some_app/views.py
+from django.views.generic import TemplateView
 
-# Create your views here.
+
+class TodoListView(TemplateView):
+    template_name = "todo/list.html"

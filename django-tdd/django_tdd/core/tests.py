@@ -18,6 +18,14 @@ class ModelTests(TestCase):
 
 
 class TodoTests(TestCase):
-    def test_homepage(self):
+    def test_todo_list_page(self):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
+
+    def test_todo_list_has_title(self):
+        response = self.client.get('/')
+        self.assertContains(response, '<div>List</div>')
+
+    def test_todo_list_has_list_of_todo(self):
+        response = self.client.get('/')
+        self.assertContains(response, '<ul><li>Todo 1</li><ul>', html=True)
