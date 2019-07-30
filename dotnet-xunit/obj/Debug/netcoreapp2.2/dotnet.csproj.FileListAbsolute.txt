@@ -1,0 +1,14 @@
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/bin/Debug/netcoreapp2.2/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/bin/Debug/netcoreapp2.2/xunit.runner.reporters.netcoreapp10.dll
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/bin/Debug/netcoreapp2.2/xunit.runner.utility.netcoreapp10.dll
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/bin/Debug/netcoreapp2.2/dotnet.deps.json
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/bin/Debug/netcoreapp2.2/dotnet.runtimeconfig.json
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/bin/Debug/netcoreapp2.2/dotnet.runtimeconfig.dev.json
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/bin/Debug/netcoreapp2.2/dotnet.dll
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/bin/Debug/netcoreapp2.2/dotnet.pdb
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/obj/Debug/netcoreapp2.2/dotnet.csprojAssemblyReference.cache
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/obj/Debug/netcoreapp2.2/dotnet.csproj.CoreCompileInputs.cache
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/obj/Debug/netcoreapp2.2/dotnet.AssemblyInfoInputs.cache
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/obj/Debug/netcoreapp2.2/dotnet.AssemblyInfo.cs
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/obj/Debug/netcoreapp2.2/dotnet.dll
+/Users/kanisornsutham/Workspace/100DaysOfCode/dotnet-xunit/obj/Debug/netcoreapp2.2/dotnet.pdb
