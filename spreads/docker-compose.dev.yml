@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  spreads-frontend:
+    container_name: spreads-frontend
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    build:
+      context: ./spreads-frontend
+      dockerfile: ./Dockerfile.dev
+    volumes:
+      - ./spreads-frontend:/app
+      - /app/node_modules
+      - /app/.next
+
+  spreads-go-api:
+    container_name: spreads-go-api
+    build:
+      context: ./spreads-go-api
+      dockerfile: ./.fresh/Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./spreads-go-api:/go/src/spreads-go-api
+    working_dir: /go/src/spreads-go-api
+    ports:
+      - "5000:5000"
