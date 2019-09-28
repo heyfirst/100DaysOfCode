@@ -1,0 +1,27 @@
+{
+  "name": "nextjs-typescript",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "analyze": "BUNDLE_ANALYZE=both next build",
+    "analyze:server": "BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "BUNDLE_ANALYZE=browser next build"
+  },
+  "dependencies": {
+    "next": "9.0.3",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "@types/react": "^16.9.2",
+    "@types/styled-components": "^4.1.18",
+    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "babel-plugin-styled-components": "^1.10.6",
+    "typescript": "^3.5.3"
+  }
+}
