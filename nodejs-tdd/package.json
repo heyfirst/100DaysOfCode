@@ -1,7 +1,7 @@
 {
   "name": "nodejs-tdd",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/bin/server.js",
   "license": "MIT",
   "devDependencies": {
     "@types/express": "^4.17.1",
@@ -15,6 +15,7 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.9",
     "jest": "^24.9.0",
     "nodemon": "^1.19.4",
     "supertest": "^4.0.2",
@@ -30,9 +31,15 @@
     "morgan": "^1.9.1"
   },
   "scripts": {
-    "dev": "nodemon src/server.js",
+    "dev": "nodemon src/bin/server.js",
     "lint": "eslint src tests",
     "lint:fix": "eslint --fix src tests",
     "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn eslint:fix && yarn eslint",
+      "pre-push": "yarn eslint"
+    }
   }
 }
