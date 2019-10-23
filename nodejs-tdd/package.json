@@ -38,8 +38,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn eslint:fix && yarn eslint",
-      "pre-push": "yarn eslint"
+      "pre-commit": "yarn lint:fix && yarn lint",
+      "pre-push": "yarn lint"
     }
   }
 }
