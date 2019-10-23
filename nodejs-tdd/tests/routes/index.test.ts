@@ -1,5 +1,5 @@
-const request = require('supertest')
-const app = require('../../src/app')
+import * as request from 'supertest'
+import app from '../../src/app'
 
 describe('Simple Routes', () => {
   it('should be run', async () => {
